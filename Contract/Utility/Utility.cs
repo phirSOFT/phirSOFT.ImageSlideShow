@@ -30,5 +30,7 @@ namespace phirSOFT.ImageSlideShow.Utility
         {
             return dictionary.ContainsKey(key) ? converter(dictionary[key]) : fallback;
         }
+
+
     }
 }

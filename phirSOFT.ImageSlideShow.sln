@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.28531.58
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "phirSOFT.ImageSlideShow", "ImageSlideShow\phirSOFT.ImageSlideShow.csproj", "{97AC15E8-FC87-40F9-8EE9-66624D525F19}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "phirSOFT.ImageSlideShow.Analyzers", "phirSOFT.ImageSlideShow.Analyzers\phirSOFT.ImageSlideShow.Analyzers\phirSOFT.ImageSlideShow.Analyzers.csproj", "{AB56482F-E251-45CF-9E95-0DFC1E6C3BB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "phirSOFT.ImageSlideShow.Analyzers", "Analyzers\phirSOFT.ImageSlideShow.Analyzers.csproj", "{AB56482F-E251-45CF-9E95-0DFC1E6C3BB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "phirSOFT.ImageSlideShow.Contract", "phirSOFT.ImageSlideShow.Contract\phirSOFT.ImageSlideShow.Contract.csproj", "{60CBC4BE-50A5-4057-AB2C-7A3B205C3400}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "phirSOFT.ImageSlideShow.Contract", "Contract\phirSOFT.ImageSlideShow.Contract.csproj", "{60CBC4BE-50A5-4057-AB2C-7A3B205C3400}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

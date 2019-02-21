@@ -10,11 +10,11 @@ namespace phirSOFT.ImageSlideShow.Services
 {
     class SourceEditorContext
     {
-        public string Title { get;}
+        public string Title { get; set;}
 
-        public Control EditorView { get;}
+        public Control EditorView { get; set;}
 
-        public ISourceEditor Editor { get;}
+        public ISourceEditor Editor { get; set;}
 
         public int SortIndex { get;}
     }

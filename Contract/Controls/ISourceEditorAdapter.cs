@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace phirSOFT.ImageSlideShow.Controls
 {
-    interface ISourceEditorAdapter<T>
+    interface ISourceEditorAdapter
+    {
+        ISourceEditor Adapt(object control);
+    }
+
+    interface ISourceEditorAdapter<in T> : ISourceEditorAdapter
     {
         ISourceEditor Adapt(T control);
     }

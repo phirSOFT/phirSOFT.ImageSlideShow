@@ -8,9 +8,9 @@ using Windows.UI.Xaml.Controls;
 
 namespace phirSOFT.ImageSlideShow.Controls
 {
-    public class ColorPickerSourceEditorAdapter : ISourceEditorAdapter<ColorPicker>
+    public class ColorPickerSourceEditorAdapter : SourceEditorAdapterBase<ColorPicker>
     {
-        public ISourceEditor Adapt(ColorPicker control)
+        public override ISourceEditor Adapt(ColorPicker control)
         {
             return new Adapter(control);
         }

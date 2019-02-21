@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using phirSOFT.PropertyObservation;
 
 // Die Elementvorlage "Benutzersteuerelement" wird unter https://go.microsoft.com/fwlink/?LinkId=234236 dokumentiert.
 
@@ -51,6 +52,7 @@ namespace phirSOFT.ImageSlideShow.Controls
         public SourceEditorControl()
         {
             this.InitializeComponent();
+            _editors.ObserveProperty(e => e.Source, (s, v) => Source = v);
         }
 
     }

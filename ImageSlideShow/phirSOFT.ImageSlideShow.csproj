@@ -166,7 +166,6 @@
     <Compile Include="Drawers\XamlDrawers\OverlayDrawer.cs" />
     <Compile Include="Drawers\XamlDrawers\XamlDrawer.cs" />
     <Compile Include="Drawers\XamlDrawers\ImageDrawer.cs" />
-    <Compile Include="Model\ImageResource.cs" />
     <Compile Include="NotInitializedException.cs" />
     <Compile Include="ProjectionViewPageInitializationData.cs" />
     <Compile Include="RectExtension.cs" />
@@ -174,16 +173,11 @@
     <Compile Include="Services\IContentProvider.cs" />
     <Compile Include="Services\SolidColorContentProvider.cs" />
     <Compile Include="TaskExtensions.cs" />
-    <Compile Include="UriParsers\ImageResourceUriParser.cs" />
     <Compile Include="ParseException.cs" />
     <Compile Include="Services\ResourceProvider.cs" />
     <Compile Include="StorageItemStreamProvider.cs" />
     <Compile Include="UnityServiceLocatorAdapter.cs" />
     <Compile Include="Converters\TextUriConverter.cs" />
-    <Compile Include="UriParsers\UriParserExtensions.cs" />
-    <Compile Include="UriParsers\ColorUriParser.cs" />
-    <Compile Include="UriParsers\IUriParser.cs" />
-    <Compile Include="UriParsers\UriParserBase.cs" />
     <Compile Include="ViewHelpers.cs" />
     <Compile Include="ViewModels\ImageSourceEditorViewModel.cs" />
     <Compile Include="ViewModels\MultiTargetViewModel.cs" />
