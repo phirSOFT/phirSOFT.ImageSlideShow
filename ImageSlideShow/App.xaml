@@ -1,0 +1,15 @@
+﻿<windows:PrismApplication
+    xmlns:windows="using:Prism.Unity"
+    x:Class="phirSOFT.ImageSlideShow.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:phirSOFT.ImageSlideShow"
+    xmlns:converters="using:phirSOFT.ImageSlideShow.Converters"
+    xmlns:uriparsers="using:phirSOFT.ImageSlideShow.UriParsers">
+    <windows:PrismApplication.Resources>
+        <converters:UriConverter x:Key="UriConverter"/>
+        <converters:InverseConverter x:Key="InverseConverter"/>
+        <converters:PropertyConverter x:Key="PropConv"/>
+        <uriparsers:TextUriConverter x:Key="TextConverter"/>
+    </windows:PrismApplication.Resources>
+</windows:PrismApplication>

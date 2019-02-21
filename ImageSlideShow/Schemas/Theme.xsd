@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Theme"
+    targetNamespace="http://phirsoft.com/schema/iss/Theme.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://phirsoft.com/schema/iss/Theme.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+  <xs:simpleType name="ResourceType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="color"/>
+      <xs:enumeration value="text"/>
+      <xs:enumeration value="image"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ResourceTypeSet">
+    <xs:list itemType="ResourceType"/>
+  </xs:simpleType>
+  
+  <xs:element name="Theme">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ThemeResources">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="ThemeResource">
+                <xs:complexType>
+                  <xs:attribute name="Identifier" type="xs:ID"/>
+                  <xs:attribute name="AllowedTypes" type="ResourceTypeSet"/>
+                  <xs:attribute name="default" type="xs:anyURI" default="null:" use="optional"/>
+                  <xs:attribute name="Label" type="xs:string"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,123 @@
+﻿<Page
+    x:Class="phirSOFT.ImageSlideShow.Views.PresentationView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:phirSOFT.ImageSlideShow.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:phirSOFT.ImageSlideShow.Controls"
+    xmlns:xamldrawers="using:phirSOFT.ImageSlideShow.Drawers.XamlDrawers"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400"
+    KeyDown="Page_KeyDown"
+    >
+    <Page.KeyboardAccelerators>
+        <KeyboardAccelerator Key="Escape" Invoked="KeyboardAccelerator_Invoked"/>
+        <KeyboardAccelerator Key="Home" Invoked="FirstSlide"/>
+        <KeyboardAccelerator Key="End" Invoked="LastSlide"/>
+        <KeyboardAccelerator Key="Left" Invoked="PrevSlide"/>
+        <KeyboardAccelerator Key="Right" Invoked="NextSlide"/>
+        <KeyboardAccelerator Key="Down" Invoked="NextSlide"/>
+        <KeyboardAccelerator Key="Up" Invoked="PrevSlide"/>
+    </Page.KeyboardAccelerators>
+    <Grid Background="Black">
+        <Viewbox Stretch="Uniform">
+            <controls:RadialImageTransition 
+               CenterX="0.95"
+               CenterY="0.85"
+               Height="1080"
+               Width="1920"
+               TransitionTime="0:0:1"
+            >
+                <!--<xamldrawers:BackgroundDrawer x:Name="bg" Source="{x:Bind Path=vm.CurrentSlide.BackgroundImage.Source, Mode=OneWay}"/>
+                <xamldrawers:OverlayDrawer OuterRadius="0.18" InnerRadius="0" Source="{x:Bind Path=vm.CurrentSlide.CornerImage.Source, Mode=OneWay}">
+                    <xamldrawers:OverlayDrawer.Bounds>
+                        <xamldrawers:CenterRelativePositioning Rect="-0.2,-0.2,0.4,0.4"/>
+                    </xamldrawers:OverlayDrawer.Bounds>
+                </xamldrawers:OverlayDrawer>
+                <xamldrawers:OverlayDrawer OuterRadius="0.2" InnerRadius="0.18" Source="color:ffffffff">
+                    <xamldrawers:OverlayDrawer.Bounds>
+                        <xamldrawers:CenterRelativePositioning Rect="-0.2, -0.2, 0.4, 0.4"/>
+                    </xamldrawers:OverlayDrawer.Bounds>
+                </xamldrawers:OverlayDrawer>
+
+                <xamldrawers:OverlayDrawer OuterRadius="1.6" InnerRadius="0.25" Source="{x:Bind Path=vm.CurrentSlide.Title.Source, Mode=OneWay}">
+                    <xamldrawers:OverlayDrawer.Bounds>
+                        <xamldrawers:CenterRelativePositioning Rect="-1.6, -0.155, 1.6, 0.22"/>
+                    </xamldrawers:OverlayDrawer.Bounds>
+                </xamldrawers:OverlayDrawer>
+
+                <xamldrawers:OverlayDrawer OuterRadius="1.6" InnerRadius="1.175" Source="{x:Bind Path=vm.CurrentSlide.Image1.Source, Mode=OneWay}">
+                    <xamldrawers:OverlayDrawer.Bounds>
+                        <xamldrawers:CenterRelativePositioning Rect="-1.6,-0.55,0.6,0.35"/>
+                    </xamldrawers:OverlayDrawer.Bounds>
+                </xamldrawers:OverlayDrawer>
+
+                <xamldrawers:OverlayDrawer OuterRadius="1.125" InnerRadius="0.75" Source="{x:Bind Path=vm.CurrentSlide.Image2.Source, Mode=OneWay}">
+                    <xamldrawers:OverlayDrawer.Bounds>
+                        <xamldrawers:CenterRelativePositioning Rect="-1.125,-0.55,0.6,0.35"/>
+                    </xamldrawers:OverlayDrawer.Bounds>
+                </xamldrawers:OverlayDrawer>
+
+                <xamldrawers:OverlayDrawer OuterRadius="0.7" InnerRadius="0.25" Source="{x:Bind Path=vm.CurrentSlide.Image3.Source, Mode=OneWay}">
+                    <xamldrawers:OverlayDrawer.Bounds>
+                        <xamldrawers:CenterRelativePositioning Rect="-0.7,-0.55,0.6,0.35"/>
+                    </xamldrawers:OverlayDrawer.Bounds>
+                </xamldrawers:OverlayDrawer>-->
+
+                <xamldrawers:BackgroundDrawer Source="color:ff3f3f3f"/>
+                <xamldrawers:BackgroundDrawer
+                        x:Name="bg"
+                        Source="{x:Bind Path=vm.CurrentSlide.BackgroundImage.Source, Mode=OneWay}">
+                    <xamldrawers:BackgroundDrawer.Bounds>
+                        <xamldrawers:CenterRelativePositioning Rect="-1.67,-0.83,1.74,0.96"/>
+                    </xamldrawers:BackgroundDrawer.Bounds>
+                </xamldrawers:BackgroundDrawer>
+
+
+                <xamldrawers:OverlayDrawer OuterRadius="0.18" InnerRadius="0" Source="{x:Bind Path=vm.CurrentSlide.CornerImage.Source, Mode=OneWay}">
+                    <xamldrawers:OverlayDrawer.Bounds>
+                        <xamldrawers:CenterRelativePositioning Rect="-0.2,-0.2,0.4,0.4"/>
+                    </xamldrawers:OverlayDrawer.Bounds>
+                </xamldrawers:OverlayDrawer>
+                <xamldrawers:OverlayDrawer OuterRadius="0.2" InnerRadius="0.18" Source="color:ffffffff">
+                    <xamldrawers:OverlayDrawer.Bounds>
+                        <xamldrawers:CenterRelativePositioning Rect="-0.2, -0.2, 0.4, 0.4"/>
+                    </xamldrawers:OverlayDrawer.Bounds>
+                </xamldrawers:OverlayDrawer>
+                <xamldrawers:OverlayDrawer OuterRadius="0.22" InnerRadius="0.2" Source="color:ff3f3f3f">
+                    <xamldrawers:OverlayDrawer.Bounds>
+                        <xamldrawers:CenterRelativePositioning Rect="-0.22, -0.22, 0.44, 0.44"/>
+                    </xamldrawers:OverlayDrawer.Bounds>
+                </xamldrawers:OverlayDrawer>
+
+                <xamldrawers:OverlayDrawer OuterRadius="1.65" InnerRadius="0.24" Source="{x:Bind Path=vm.CurrentSlide.Title.Source, Mode=OneWay}">
+                    <xamldrawers:OverlayDrawer.Bounds>
+                        <xamldrawers:CenterRelativePositioning Rect="-1.65, 0.0, 1.6, 0.11"/>
+                    </xamldrawers:OverlayDrawer.Bounds>
+                </xamldrawers:OverlayDrawer>
+
+
+
+                <xamldrawers:OverlayDrawer InnerRadius="0" OuterRadius="2"  Source="{x:Bind Path=vm.CurrentSlide.Image1.Source, Mode=OneWay}">
+                    <xamldrawers:OverlayDrawer.Bounds>
+                        <xamldrawers:CenterRelativePositioning Rect="-1.65,-0.37,0.453,0.35"/>
+                    </xamldrawers:OverlayDrawer.Bounds>
+                </xamldrawers:OverlayDrawer>
+
+                <xamldrawers:OverlayDrawer  InnerRadius="0" OuterRadius="2"  Source="{x:Bind Path=vm.CurrentSlide.Image2.Source, Mode=OneWay}">
+                    <xamldrawers:OverlayDrawer.Bounds>
+                        <xamldrawers:CenterRelativePositioning Rect="-1.173,-0.37,0.453,0.35"/>
+                    </xamldrawers:OverlayDrawer.Bounds>
+                </xamldrawers:OverlayDrawer>
+
+                <xamldrawers:OverlayDrawer  InnerRadius="0" OuterRadius="2"  Source="{x:Bind Path=vm.CurrentSlide.Image3.Source, Mode=OneWay}">
+                    <xamldrawers:OverlayDrawer.Bounds>
+                        <xamldrawers:CenterRelativePositioning Rect="-0.693,-0.37,0.453,0.35"/>
+                    </xamldrawers:OverlayDrawer.Bounds>
+                </xamldrawers:OverlayDrawer>
+            </controls:RadialImageTransition>
+        </Viewbox>
+    </Grid>
+</Page>
