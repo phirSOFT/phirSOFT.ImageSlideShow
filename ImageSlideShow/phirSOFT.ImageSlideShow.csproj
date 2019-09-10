@@ -311,7 +311,7 @@
       <Version>5.0.0-pre-05</Version>
     </PackageReference>
     <PackageReference Include="Prism.Core">
-      <Version>7.2.0.980-ci</Version>
+      <Version>7.2.0.1367</Version>
     </PackageReference>
     <PackageReference Include="Prism.Unity.Windows">
       <Version>7.2.0.980-ci</Version>
