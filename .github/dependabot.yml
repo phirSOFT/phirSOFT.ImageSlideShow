@@ -1,0 +1,35 @@
+version: 2
+updates:
+- package-ecosystem: nuget
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: Prism.Core
+    versions:
+    - "> 7.2.0.980-ci"
+  - dependency-name: Microsoft.Toolkit.Uwp.UI.Controls
+    versions:
+    - 6.1.1
+    - 7.0.0
+  - dependency-name: Microsoft.Toolkit.Uwp
+    versions:
+    - 6.1.1
+    - 7.0.0
+  - dependency-name: Microsoft.Toolkit.Uwp.UI
+    versions:
+    - 6.1.1
+    - 7.0.0
+  - dependency-name: Microsoft.NETCore.UniversalWindowsPlatform
+    versions:
+    - 6.2.11
+  - dependency-name: Microsoft.CodeAnalysis.CSharp.Workspaces
+    versions:
+    - 3.8.0
+  - dependency-name: Win2D.uwp
+    versions:
+    - 1.25.0
+  - dependency-name: CommonServiceLocator
+    versions:
+    - 2.0.5
